@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EventLog - Organize Your Life</title>
+  <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+  <div id="loadingState" class="loading-container">
+    <svg class="spinner" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v4m0 12v4m-8-8H2m20 0h-4" />
+    </svg>
+  </div>
+
+  <!-- Main Content -->
+  <div id="app" class="flex min-h-screen flex-col bg-gradient-to-br">
+    <!-- Header -->
+    <header class="container mx-auto py-6 px-4 md:px-6">
+      <div class="flex justify-between items-center">
+        <div class="logo">EventLog</div>
+        <nav class="space-x-2 sm:space-x-4">
+          <a href="login.html" class="btn btn-ghost">Login</a>
+          <a href="signup.html" class="btn btn-primary">Sign Up</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="flex-1">
+      <section class="container mx-auto flex flex-col md:flex-row items-center justify-center md:justify-between text-center md:text-left py-12 md:py-20 px-4 md:px-6">
+        <div class="md:w-1/2 space-y-6 mb-10 md:mb-0">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground">
+            Organize Your Life, <span class="text-primary">One Event at a Time.</span>
+          </h1>
+          <p class="text-lg sm:text-xl text-muted-foreground">
+            EventLog makes it simple to create, manage, and book events. Never miss an important occasion again.
+            Join us and start planning today!
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <a href="signup.html" class="btn btn-accent btn-lg">Get Started Free</a>
+            <a href="login.html" class="btn btn-outline btn-lg">I have an account</a>
+          </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center items-center">
+          <img src="https://picsum.photos/seed/eventplan/600/400" 
+               alt="People planning events around a large calendar" 
+               class="rounded-lg shadow-xl object-cover w-full max-w-lg">
+        </div>
+      </section>
+    </main>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-background/70">
+      <div class="container mx-auto text-center px-4 md:px-6">
+        <h2 class="text-3xl font-bold tracking-tight mb-3">Why Choose EventLog?</h2>
+        <p class="text-muted-foreground mb-12 max-w-2xl mx-auto">
+          Streamline your event planning with our intuitive platform. Focus on what matters most – creating memorable experiences.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="feature-card">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+            </svg>
+            <h3 class="feature-title">Easy Event Creation</h3>
+            <p class="feature-description">Quickly set up new events with all the details you need, hassle-free.</p>
+          </div>
+          <div class="feature-card">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            <h3 class="feature-title">Seamless Booking</h3>
+            <p class="feature-description">Browse and book events from others in the community with just a few clicks.</p>
+          </div>
+          <div class="feature-card">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <h3 class="feature-title">Personal Event Log</h3>
+            <p class="feature-description">Keep track of all your created and booked events in one organized place.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="homepage.js"></script>
+</body>
+</html>

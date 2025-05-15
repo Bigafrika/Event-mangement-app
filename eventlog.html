@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Event Log</title>
+  <link rel="stylesheet" href="eventlog.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <a href="dashboard.html" class="back-button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+        </svg>
+        Back to Dashboard
+      </a>
+      <h1 class="page-title">My Event Log</h1>
+    </nav>
+
+    <main class="main-content">
+      <div class="event-log-container">
+        <div class="event-log-header">
+          <h2>Your Booked Events</h2>
+          <div class="search-filter">
+            <input type="text" id="searchEvents" placeholder="Search events..." class="search-input">
+            <select id="sortEvents" class="sort-select">
+              <option value="date-asc">Date (Oldest First)</option>
+              <option value="date-desc">Date (Newest First)</option>
+              <option value="name-asc">Name (A-Z)</option>
+              <option value="name-desc">Name (Z-A)</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="bookedEventsList" class="event-list">
+          <!-- Events will be loaded here by JavaScript -->
+          <div class="no-events-message">
+            <p>You haven't booked any events yet.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div id="toastContainer" class="toast-container"></div>
+
+  <script src="eventlog.js"></script>
+</body>
+</html>

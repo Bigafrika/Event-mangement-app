@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Form</title>
+  <link rel="stylesheet" href="eventform.css">
+</head>
+<body>
+  <div class="card">
+    <div class="card-header">
+      <button id="backButton" class="back-button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+        Back to Dashboard
+      </button>
+      <h1 class="card-title">Create Event</h1>
+      <p class="card-description">Fill out the form to create a new event</p>
+    </div>
+    <form id="eventForm">
+      <div class="card-content">
+        <div class="form-group">
+          <label for="name" class="label">Event Name</label>
+          <input type="text" id="name" class="input" placeholder="e.g. Summer Music Festival" required minlength="3">
+          <p id="nameError" class="error-message"></p>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="date" class="label">Date</label>
+            <div class="date-picker">
+              <button type="button" id="dateTrigger" class="date-trigger">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <span id="dateDisplay">Pick a date</span>
+              </button>
+              <div id="datePicker" class="calendar-popup">
+                <div class="calendar-header">
+                  <button type="button" class="nav-button" id="prevMonth">&lt;</button>
+                  <h3 id="currentMonth">June 2023</h3>
+                  <button type="button" class="nav-button" id="nextMonth">&gt;</button>
+                </div>
+                <div class="calendar-grid">
+                  <div class="calendar-weekdays">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                  </div>
+                  <div class="calendar-days" id="calendarDays"></div>
+                </div>
+              </div>
+            </div>
+            <p id="dateError" class="error-message"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="time" class="label">Time (HH:MM)</label>
+            <input type="text" id="time" class="input" placeholder="HH:MM (e.g. 14:30)" required pattern="([01][0-9]|2[0-3]):[0-5][0-9]">
+            <p id="timeError" class="error-message"></p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="location" class="label">Location</label>
+          <input type="text" id="location" class="input" placeholder="e.g. Central Park, New York" required minlength="3">
+          <p id="locationError" class="error-message"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="description" class="label">Description</label>
+          <textarea id="description" class="textarea" placeholder="Describe your event..." rows="5" required minlength="10"></textarea>
+          <p id="descriptionError" class="error-message"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="imageUrl" class="label">Image URL (Optional)</label>
+          <input type="url" id="imageUrl" class="input" placeholder="https://example.com/image.jpg">
+        </div>
+      </div>
+      <div class="card-footer">
+        <button type="submit" id="submitBtn" class="btn btn-accent">
+          <span id="spinner" class="spinner" style="display: none;"></span>
+          <span id="submitText">Create Event</span>
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div id="toastContainer" class="toast-container"></div>
+
+  <script src="eventform.js"></script>
+</body>
+</html>
